@@ -1,0 +1,32 @@
+#!/bin/bash
+
+Echo starting sims Shell script
+
+
+
+#curl -i -H "Accept: application/json" -H "Content-Type: application/json" -X GET http://localhost:8080/api/test
+
+
+get_name() {
+  echo "sim"
+}
+
+Echo "+++++ $(get_name)"
+Echo after
+Echo after
+Echo ++Question++
+
+ read -p "Are you 21 or over? Y/N " ANSWER
+ case "$ANSWER" in 
+   [yY] | [yY][eE][sS])
+    echo "You can have a beer :)"
+     ;;
+   [nN] | [nN][oO])
+     echo "Sorry, no drinking"
+     ;;
+   *)
+     echo "Please enter y/yes or n/no"
+     ;;
+ esac
+
+ 
